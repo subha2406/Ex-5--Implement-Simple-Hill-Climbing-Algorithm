@@ -1,6 +1,6 @@
-<h1>ExpNo 5 : Implement Simple Hill Climbing Algorithm</h1> 
-<h3>Name:             </h3>
-<h3>Register Number:             </h3>
+<img width="622" height="814" alt="image" src="https://github.com/user-attachments/assets/e6ebd40d-c028-41cc-8fef-e0fec10e5327" /><h1>ExpNo 5 : Implement Simple Hill Climbing Algorithm</h1> 
+<h3>Name:SUBHA SHREE U             </h3>
+<h3>Register Number:2305002025            </h3>
 <H3>Aim:</H3>
 <p>Implement Simple Hill Climbing Algorithm and Generate a String by Mutating a Single Character at each iteration </p>
 <h2> Theory: </h2>
@@ -80,7 +80,11 @@ SimpleHillClimbing()
 <hr>
 <h2>Sample Input and Output</h2>
 <h2>Sample String:</h2> Artificial Intelligence
-<h2>Output:</h2>
+<h2>Output:<img width="993" height="855" alt="image" src="https://github.com/user-attachments/assets/23bc8751-3af5-42e0-aa44-ea706fa132d4" />
+
+ <img width="622" height="814" alt="image" src="https://github.com/user-attachments/assets/431e19ea-95f6-4b37-afe4-ef1789a29037" />
+
+</h2>
 Score: 643  Solution :  8RzF:oG ]%;CPORRMe!zGvk<br>
 Score: 609  Solution :  8RzF:oG ]%;CPqRRMe!zGvk<br>
 Score: 604  Solution :  8RzF:oG ]%;CPqRRMe!zGqk<br>
