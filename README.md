@@ -1,6 +1,6 @@
 <h1>ExpNo 5 : Implement Simple Hill Climbing Algorithm</h1> 
-<h3>Name: AMMINENI MOKSHASREE           </h3>
-<h3>Register Number: 2305001001            </h3>
+<h3>Name: Subha Shree U          </h3>
+<h3>Register Number: 2305002025           </h3>
 <H3>Aim:</H3>
 <p>Implement Simple Hill Climbing Algorithm and Generate a String by Mutating a Single Character at each iteration </p>
 <h2> Theory: </h2>
@@ -40,60 +40,26 @@ Feedback is provided in terms of heuristic function
 
 ## PROGRAM
 ```python
-import random
-import string
+import random, string
 
-def generate_random_solution(answer):
-    l = len(answer)
-    return [random.choice(string.printable) for _ in range(l)]
+answer = "Artificial Intelligence"
+gen = lambda: [random.choice(string.printable) for _ in range(len(answer))]
+score = lambda s: sum(abs(ord(a)-ord(b)) for a,b in zip(s,answer))
 
-def evaluate(solution, answer):
-    print(solution)
-    target = list(answer)
-    diff = 0
-    for i in range(len(target)):
-        s = solution[i]
-        t = target[i]
-        # Calculate absolute ASCII difference
-        diff += abs(ord(s) - ord(t))
-    return diff   # ✅ placed on a new line
-
-def mutate_solution(solution):
-    ind = random.randint(0, len(solution) - 1)
-    solution[ind] = random.choice(string.printable)
-    return solution
-
-def SimpleHillClimbing():
-    answer = "Artificial Intelligence"
-    best = generate_random_solution(answer)
-    best_score = evaluate(best, answer)
-    
-    while True:
-        print("Score:", best_score, "Solution:", "".join(best))
-        
-        if best_score == 0:
-            print("\nGoal Reached! Final Solution:", "".join(best))
-            break
-        
-        new_solution = mutate_solution(list(best))
-        score = evaluate(new_solution, answer)
-        
-        if score < best_score:
-            best = new_solution
-            best_score = score
-
-SimpleHillClimbing()
+best = gen()
+while True:
+    print("Score:", score(best), "Solution:", "".join(best))
+    if score(best) == 0: break
+    new = best[:]; new[random.randrange(len(answer))] = random.choice(string.printable)
+    if score(new) < score(best): best = new
 ```
 
-<hr>
-<h2>Input and Output</h2>
-<h2>Sample String:</h2> Moksha
-<h2>Output:</h2>
-<img width="549" height="388" alt="Screenshot 2025-10-08 094306" src="https://github.com/user-attachments/assets/deee69d0-a28a-41aa-9a30-94211de79563" />
-
-<img width="536" height="368" alt="Screenshot 2025-10-08 094344" src="https://github.com/user-attachments/assets/d7d3eb72-25b0-4421-9e8b-5cd66687a2ed" />
-
-<h3>RESULT:</h3>
-Thus, the given program was implemented and executed successfully.
+## OUTPUT
+<img width="538" height="889" alt="image" src="https://github.com/user-attachments/assets/5203c0e4-302f-4686-b038-b5c65f99ae14" />
 
 
+<img width="583" height="833" alt="image" src="https://github.com/user-attachments/assets/0cbc629e-77ce-4332-be60-ccffd1e63b7d" />
+
+
+## RESULT:
+Thus the program to Implement Simple Hill Climbing Algorithm has been executed successfully
